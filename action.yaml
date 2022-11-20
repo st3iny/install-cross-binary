@@ -1,0 +1,14 @@
+name: 'Install cross binary'
+description: 'GitHub action to install a https://github.com/cross-rs/cross binary.'
+inputs:
+  release:
+    description: 'Release to install'
+    required: true
+    default: 'latest'
+  destination:
+    description: 'Directory to install the binary to'
+    required: true
+    default: '/usr/local/bin'
+runs:
+  using: 'node16'
+  main: 'dist/index.js'

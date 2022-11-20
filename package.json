@@ -1,0 +1,33 @@
+{
+  "name": "install-cross-binary",
+  "version": "0.1.0-alpha.1",
+  "description": "GitHub action to install a https://github.com/cross-rs/cross binary.",
+  "main": "dist/index.js",
+  "scripts": {
+    "watch": "ncc build index.ts --watch",
+    "build": "ncc build index.ts --license licenses.txt",
+    "clean": "rm -rf dist",
+    "test": "ncc run test.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/st3iny/install-cross-binary.git"
+  },
+  "author": "Richard Steinmetz <richard@steinmetz.cloud>",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/st3iny/install-cross-binary/issues"
+  },
+  "homepage": "https://github.com/st3iny/install-cross-binary#readme",
+  "dependencies": {
+    "@actions/core": "^1.10.0",
+    "@actions/exec": "^1.1.1",
+    "@actions/tool-cache": "^2.0.1"
+  },
+  "devDependencies": {
+    "@tsconfig/node16": "^1.0.3",
+    "@types/node": "^18.11.9",
+    "@vercel/ncc": "^0.34.0",
+    "typescript": "^4.9.3"
+  }
+}
