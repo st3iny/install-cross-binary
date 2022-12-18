@@ -42,7 +42,7 @@ jobs:
           previous_tag=v"$((new_tag_num-1))"
           if ! git tag | grep -q "$previous_tag"; then
             previous_tag=''
-          else
+          fi
 
           echo previous_tag="$previous_tag" >> $GITHUB_ENV
           echo new_tag="$new_tag" >> $GITHUB_ENV
