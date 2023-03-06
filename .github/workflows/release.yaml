@@ -70,7 +70,7 @@ jobs:
           npm run clean
           npm run build
 
-      - uses: fregante/setup-git-user@v1
+      - uses: fregante/setup-git-user@v2
       - name: Commit, tag and push built release artifacts
         run: |
           git add --force dist
