@@ -58,10 +58,10 @@ jobs:
           fi
           sed -Ei 's/^[a-zA-Z0-9]/- \0/' changelog.md
 
-      - name: Use Node.js 16
+      - name: Use Node.js 24
         uses: actions/setup-node@v6
         with:
-          node-version: 16
+          node-version: 24
           cache: 'npm'
 
       - name: Build release artifacts
